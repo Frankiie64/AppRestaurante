@@ -17,7 +17,7 @@ namespace Restaurant_CRUD
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FRMLoadMesas());
+            Application.Run(FRMLoadMesas.Instancia);
         }
     }
 }

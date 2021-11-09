@@ -31,9 +31,9 @@ namespace Restaurant_CRUD
         {
             this.TLPMain = new System.Windows.Forms.TableLayoutPanel();
             this.BTMesa1 = new System.Windows.Forms.Button();
+            this.BTMMesa5 = new System.Windows.Forms.Button();
             this.BTMMesa2 = new System.Windows.Forms.Button();
             this.BTMMesa4 = new System.Windows.Forms.Button();
-            this.BTMMesa5 = new System.Windows.Forms.Button();
             this.BTMMesa3 = new System.Windows.Forms.Button();
             this.BTMMesa6 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -80,28 +80,7 @@ namespace Restaurant_CRUD
             this.BTMesa1.TabIndex = 1;
             this.BTMesa1.Text = "Mesa 1";
             this.BTMesa1.UseVisualStyleBackColor = true;
-            // 
-            // BTMMesa2
-            // 
-            this.BTMMesa2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.BTMMesa2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.BTMMesa2.Location = new System.Drawing.Point(283, 115);
-            this.BTMMesa2.Name = "BTMMesa2";
-            this.BTMMesa2.Size = new System.Drawing.Size(234, 106);
-            this.BTMMesa2.TabIndex = 2;
-            this.BTMMesa2.Text = "Mesa 2";
-            this.BTMMesa2.UseVisualStyleBackColor = true;
-            // 
-            // BTMMesa4
-            // 
-            this.BTMMesa4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.BTMMesa4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.BTMMesa4.Location = new System.Drawing.Point(43, 227);
-            this.BTMMesa4.Name = "BTMMesa4";
-            this.BTMMesa4.Size = new System.Drawing.Size(234, 106);
-            this.BTMMesa4.TabIndex = 3;
-            this.BTMMesa4.Text = "Mesa 4";
-            this.BTMMesa4.UseVisualStyleBackColor = true;
+            this.BTMesa1.Click += new System.EventHandler(this.BTMesa1_Click);
             // 
             // BTMMesa5
             // 
@@ -113,6 +92,31 @@ namespace Restaurant_CRUD
             this.BTMMesa5.TabIndex = 5;
             this.BTMMesa5.Text = "Mesa 5";
             this.BTMMesa5.UseVisualStyleBackColor = true;
+            this.BTMMesa5.Click += new System.EventHandler(this.BTMMesa5_Click);
+            // 
+            // BTMMesa2
+            // 
+            this.BTMMesa2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.BTMMesa2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.BTMMesa2.Location = new System.Drawing.Point(283, 115);
+            this.BTMMesa2.Name = "BTMMesa2";
+            this.BTMMesa2.Size = new System.Drawing.Size(234, 106);
+            this.BTMMesa2.TabIndex = 2;
+            this.BTMMesa2.Text = "Mesa 2";
+            this.BTMMesa2.UseVisualStyleBackColor = true;
+            this.BTMMesa2.Click += new System.EventHandler(this.BTMMesa2_Click);
+            // 
+            // BTMMesa4
+            // 
+            this.BTMMesa4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.BTMMesa4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.BTMMesa4.Location = new System.Drawing.Point(43, 227);
+            this.BTMMesa4.Name = "BTMMesa4";
+            this.BTMMesa4.Size = new System.Drawing.Size(234, 106);
+            this.BTMMesa4.TabIndex = 3;
+            this.BTMMesa4.Text = "Mesa 4";
+            this.BTMMesa4.UseVisualStyleBackColor = true;
+            this.BTMMesa4.Click += new System.EventHandler(this.BTMMesa4_Click);
             // 
             // BTMMesa3
             // 
@@ -124,6 +128,7 @@ namespace Restaurant_CRUD
             this.BTMMesa3.TabIndex = 6;
             this.BTMMesa3.Text = "Mesa 3";
             this.BTMMesa3.UseVisualStyleBackColor = true;
+            this.BTMMesa3.Click += new System.EventHandler(this.BTMMesa3_Click);
             // 
             // BTMMesa6
             // 
@@ -135,6 +140,7 @@ namespace Restaurant_CRUD
             this.BTMMesa6.TabIndex = 7;
             this.BTMMesa6.Text = "Mesa 6";
             this.BTMMesa6.UseVisualStyleBackColor = true;
+            this.BTMMesa6.Click += new System.EventHandler(this.BTMMesa6_Click);
             // 
             // label1
             // 

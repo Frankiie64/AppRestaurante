@@ -10,17 +10,52 @@ using System.Windows.Forms;
 
 namespace Restaurant_CRUD
 {
-    public partial class FRMLoadMesas : Form
+    public sealed partial class FRMLoadMesas : Form
     {
-        public FRMLoadMesas()
+        FRMCantidadPersonas CantidadPersonas;
+        private FRMLoadMesas()
         {
             InitializeComponent();
         }
 
+        public static FRMLoadMesas Instancia { get; } = new FRMLoadMesas();
+
         public void CantidadOrdernes()
-        { 
-            
+        {
+            CantidadPersonas = new FRMCantidadPersonas();
+            CantidadPersonas.Show();
+            this.Hide();
         
+        }
+
+        private void BTMesa1_Click(object sender, EventArgs e)
+        {
+            CantidadOrdernes();
+        }
+
+        private void BTMMesa2_Click(object sender, EventArgs e)
+        {
+            CantidadOrdernes();
+        }
+
+        private void BTMMesa3_Click(object sender, EventArgs e)
+        {
+            CantidadOrdernes();
+        }
+
+        private void BTMMesa4_Click(object sender, EventArgs e)
+        {
+            CantidadOrdernes();
+        }
+
+        private void BTMMesa5_Click(object sender, EventArgs e)
+        {
+            CantidadOrdernes();
+        }
+
+        private void BTMMesa6_Click(object sender, EventArgs e)
+        {
+            CantidadOrdernes();
         }
     }
 }
