@@ -10,7 +10,9 @@ using LogicLayer;
 namespace Restaurant_CRUD
 {
     public partial class FRMPedidos : Form
-    {        
+    {
+        bool Seguir;
+        bool Avanzar = false;
         public FRMPedidos()
         {
             InitializeComponent();
@@ -19,7 +21,17 @@ namespace Restaurant_CRUD
         {
             Validation();           
         }
-
+        private void f(object sender, FormClosingEventArgs e)
+        {
+            if (Avanzar == true)
+            {
+                e.Cancel = false;
+            }
+            else if (Avanzar == false)
+            {
+               e.Cancel = Continuar();
+            }
+        }
         private void FRMPedidos_Load(object sender, EventArgs e)
         {
             ComboboxItemEntrada();
@@ -30,8 +42,27 @@ namespace Restaurant_CRUD
 
         private void FRMPedidos_FormClosed(object sender, FormClosedEventArgs e)
         {
-            DroppOrdenes();
-            FRMLoadMesas.Instancia.Show();
+                  
+        }
+
+        private bool Continuar()
+        {
+            
+            DialogResult result = MessageBox.Show("Desea continuar ?", "Noticacion",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (result == DialogResult.Yes)
+            {
+                Seguir = true;
+            }
+            else
+            {
+                Repositorio.Instancia.CantidadOrdenes = Repositorio.Instancia.CantidadPersonasMesa;
+                DroppOrdenes();
+                Seguir = false;
+            }
+            return Seguir;
+
         }
 
 
@@ -58,7 +89,7 @@ namespace Restaurant_CRUD
             }
             ComboBoxItem Cardo = new ComboBoxItem();
             {
-                Cardo.Texto = "Seleccione una opcion";
+                Cardo.Texto = "Zaconcho";
                 Cardo.Value = 3;
 
             }
@@ -218,7 +249,6 @@ namespace Restaurant_CRUD
 
             CBXBebidas.SelectedItem = DefaultOpc;
 
-
         }
 
         public void LoadPostre()
@@ -260,25 +290,26 @@ namespace Restaurant_CRUD
             {
                 MessageBox.Show($"Introduzca el nombre del cliente.");
             }
-            else if (CBXEntrada.SelectedItem == null)
+            else if (CBXEntrada.SelectedIndex == 0)
             {
                 MessageBox.Show($"Introduzca la entrada del cliente.");
             }
-            else if (CBXPlatoFuerte.SelectedItem == null)
+            else if (CBXPlatoFuerte.SelectedIndex == 0)
             {
                 MessageBox.Show($"Introduzca el plato fuerte del cliente.");
             }
-            else if (CBXBebidas.SelectedItem == null)
+            else if (CBXBebidas.SelectedIndex == 0)
             {
                 MessageBox.Show($"Introduzca la bebida del cliente.");
             }
-            else if (CBXPostre.SelectedItem == null)
+            else if (CBXPostre.SelectedIndex == 0)
             {
                 MessageBox.Show($"Introduzca el postre del cliente.");
             }
             else
             {
-                MessageBox.Show($"its okey", "Notificacion");
+                MessageBox.Show($"Se ha registrado correctamente la orden" +
+                    $"", "Notificacion");
 
                 Orden = new Pedidos();
                 {
@@ -287,25 +318,20 @@ namespace Restaurant_CRUD
                     Orden.Bebida = CBXBebidas.Text;
                     Orden.Postre = CBXPostre.Text;
                     Orden.Platofuerte = CBXPlatoFuerte.Text;
+                    Orden.NumeroMesa = Repositorio.Instancia.NumeroMesa;
 
                 }
 
                 Repositorio.Instancia.Ordenes.Add(Orden);
+                Avanzar = true;
                 this.Close();
             }
 
-        }
-
-       
+        }       
         public void DroppOrdenes()
-        {
-            int I = 0;
-         
-            for (I = 0; I <= Repositorio.Instancia.Ordenes.Count - 1; I++)
-            {
-                Repositorio.Instancia.Ordenes.RemoveAt(I);
-            }
-
+        {            
+            Repositorio.Instancia.Ordenes.Clear();            
         }
+
     }
 }

@@ -20,3 +20,4 @@ C:\Users\Franklyn\source\repos\Restaurant_CRUD\Restaurant_CRUD\obj\Debug\netcore
 C:\Users\Franklyn\source\repos\Restaurant_CRUD\Restaurant_CRUD\obj\Debug\netcoreapp3.1\Restaurant_CRUD.FRMCantidadPersonas.resources
 C:\Users\Franklyn\source\repos\Restaurant_CRUD\Restaurant_CRUD\obj\Debug\netcoreapp3.1\Restaurant_CRUD.FRMListarOrdenes.resources
 C:\Users\Franklyn\source\repos\Restaurant_CRUD\Restaurant_CRUD\obj\Debug\netcoreapp3.1\Restaurant_CRUD.FRMPedidos.resources
+C:\Users\Franklyn\source\repos\Restaurant_CRUD\Restaurant_CRUD\obj\Debug\netcoreapp3.1\Restaurant_CRUD.FRMConfirmacion.resources

@@ -10,14 +10,11 @@ namespace LogicLayer
         public static Repositorio Instancia { get; } = new Repositorio();
 
         public int CantidadPersonasMesa = new int();
+        public int CantidadOrdenes = new int();
+        public int NumeroMesa = new int();
 
-        public List<Mesa> Mesa1 = new List<Mesa>();
-        List<Mesa> Mesa2 = new List<Mesa>();
-        List<Mesa> Mesa3 = new List<Mesa>();
-        List<Mesa> Mesa4 = new List<Mesa>();
-        List<Mesa> Mesa5 = new List<Mesa>();
-        List<Mesa> Mesa6 = new List<Mesa>();
-
+        public List<Pedidos> Mesa = new List<Pedidos>();
+        
         public List<Pedidos> Ordenes = new List<Pedidos>();
 
 

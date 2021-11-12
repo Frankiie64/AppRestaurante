@@ -11,8 +11,14 @@ namespace LogicLayer
         public string Platofuerte { get; set; }
         public string Bebida { get; set; }
         public string Postre { get; set; }
+        public int NumeroMesa { get; set; }
 
-      
+        public string GetMsj()
+        {
+            return $"Nombre: {Nombre}, Entrada: {Entrada}, Plato fuerte: {Platofuerte}, Bebida: {Bebida}" +
+                $", Postre: {Postre}, Numero de la mesa :{NumeroMesa}";
+        
+        }
 
     }
 }

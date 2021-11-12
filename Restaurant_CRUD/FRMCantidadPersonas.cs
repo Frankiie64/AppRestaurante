@@ -28,10 +28,18 @@ namespace Restaurant_CRUD
         }
         private void BTMEnviarCantidadPerosnas_Click(object sender, EventArgs e)
         {
-           Repositorio.Instancia.CantidadPersonasMesa = CbxCantidadPersonas.SelectedIndex;
-            this.Close();
-            FRMLoadMesas.Instancia.Hide();
-            Pedidos.Gestion();
+
+            if (CbxCantidadPersonas.SelectedIndex == 0)
+            {
+                MessageBox.Show("Por favor introduzca la cantidad de personas que van a ordenar.", "Notificacion");
+            }
+            else
+            { 
+               Repositorio.Instancia.CantidadPersonasMesa = CbxCantidadPersonas.SelectedIndex;
+                this.Close();
+                FRMLoadMesas.Instancia.Hide();
+                Pedidos.Gestion();
+            }
         }
               
 
@@ -39,7 +47,7 @@ namespace Restaurant_CRUD
         {
             ComboBoxItem DefaultOpc = new ComboBoxItem();
             {
-                DefaultOpc.Texto = "Seleccione la cantidad de persona que hay en la mesa";
+                DefaultOpc.Texto = "Seleccione una de las opciones";
                 DefaultOpc.Value = null;
 
                 CbxCantidadPersonas.Items.Add(DefaultOpc);

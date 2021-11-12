@@ -30,8 +30,8 @@ namespace Restaurant_CRUD
         private void InitializeComponent()
         {
             this.TLPPedidos = new System.Windows.Forms.TableLayoutPanel();
-            this.LViewPedidos = new System.Windows.Forms.ListView();
             this.BTMVolverAtras = new System.Windows.Forms.Button();
+            this.LBoxListarPedios = new System.Windows.Forms.ListBox();
             this.TLPPedidos.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -42,8 +42,8 @@ namespace Restaurant_CRUD
             this.TLPPedidos.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
             this.TLPPedidos.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.TLPPedidos.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.TLPPedidos.Controls.Add(this.LViewPedidos, 0, 0);
             this.TLPPedidos.Controls.Add(this.BTMVolverAtras, 2, 2);
+            this.TLPPedidos.Controls.Add(this.LBoxListarPedios, 0, 0);
             this.TLPPedidos.Dock = System.Windows.Forms.DockStyle.Fill;
             this.TLPPedidos.Location = new System.Drawing.Point(0, 0);
             this.TLPPedidos.Name = "TLPPedidos";
@@ -51,20 +51,8 @@ namespace Restaurant_CRUD
             this.TLPPedidos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.TLPPedidos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.TLPPedidos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.TLPPedidos.Size = new System.Drawing.Size(800, 450);
+            this.TLPPedidos.Size = new System.Drawing.Size(1296, 450);
             this.TLPPedidos.TabIndex = 0;
-            // 
-            // LViewPedidos
-            // 
-            this.TLPPedidos.SetColumnSpan(this.LViewPedidos, 3);
-            this.LViewPedidos.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.LViewPedidos.HideSelection = false;
-            this.LViewPedidos.Location = new System.Drawing.Point(3, 3);
-            this.LViewPedidos.Name = "LViewPedidos";
-            this.TLPPedidos.SetRowSpan(this.LViewPedidos, 2);
-            this.LViewPedidos.Size = new System.Drawing.Size(794, 292);
-            this.LViewPedidos.TabIndex = 0;
-            this.LViewPedidos.UseCompatibleStateImageBehavior = false;
             // 
             // BTMVolverAtras
             // 
@@ -72,21 +60,36 @@ namespace Restaurant_CRUD
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.BTMVolverAtras.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.BTMVolverAtras.Location = new System.Drawing.Point(535, 301);
+            this.BTMVolverAtras.Location = new System.Drawing.Point(866, 303);
             this.BTMVolverAtras.Name = "BTMVolverAtras";
-            this.BTMVolverAtras.Size = new System.Drawing.Size(262, 146);
+            this.BTMVolverAtras.Size = new System.Drawing.Size(427, 144);
             this.BTMVolverAtras.TabIndex = 1;
             this.BTMVolverAtras.Text = "Volver Atras";
             this.BTMVolverAtras.UseVisualStyleBackColor = true;
+            this.BTMVolverAtras.Click += new System.EventHandler(this.BTMVolverAtras_Click);
+            // 
+            // LBoxListarPedios
+            // 
+            this.TLPPedidos.SetColumnSpan(this.LBoxListarPedios, 3);
+            this.LBoxListarPedios.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.LBoxListarPedios.FormattingEnabled = true;
+            this.LBoxListarPedios.ItemHeight = 25;
+            this.LBoxListarPedios.Location = new System.Drawing.Point(3, 3);
+            this.LBoxListarPedios.Name = "LBoxListarPedios";
+            this.TLPPedidos.SetRowSpan(this.LBoxListarPedios, 2);
+            this.LBoxListarPedios.Size = new System.Drawing.Size(1290, 294);
+            this.LBoxListarPedios.TabIndex = 2;
             // 
             // FRMListarOrdenes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1296, 450);
             this.Controls.Add(this.TLPPedidos);
             this.Name = "FRMListarOrdenes";
             this.Text = "Ver pedidos";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FRMListarOrdenes_FormClosed);
+            this.Load += new System.EventHandler(this.FRMListarOrdenes_Load);
             this.TLPPedidos.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -95,7 +98,7 @@ namespace Restaurant_CRUD
         #endregion
 
         private System.Windows.Forms.TableLayoutPanel TLPPedidos;
-        private System.Windows.Forms.ListView LViewPedidos;
         private System.Windows.Forms.Button BTMVolverAtras;
+        private System.Windows.Forms.ListBox LBoxListarPedios;
     }
 }

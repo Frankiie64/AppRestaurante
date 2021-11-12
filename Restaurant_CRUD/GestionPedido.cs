@@ -8,22 +8,29 @@ namespace Restaurant_CRUD
     public class GestionPedido
     {
         FRMPedidos pedidos;
+        FRMConfirmacion Confirmacion = new FRMConfirmacion();
         public void Gestion()
         {
+            
             int CantidadPersonas = Repositorio.Instancia.CantidadPersonasMesa;
 
-            int X = 1;
-
-            for (X = 1; X <= CantidadPersonas; X++)
+            for (Repositorio.Instancia.CantidadOrdenes = 1; Repositorio.Instancia.CantidadOrdenes <= CantidadPersonas; Repositorio.Instancia.CantidadOrdenes++)
             {
+                FRMLoadMesas.Instancia.Hide();
                 pedidos = new FRMPedidos();
                 pedidos.ShowDialog();
-                FRMLoadMesas.Instancia.Hide();
+                
             }
 
-            pedidos.Close();
-            FRMLoadMesas.Instancia.Show();
-
+            if (Repositorio.Instancia.Ordenes.Count != 0)
+            {
+                pedidos.Close();
+                Confirmacion.Show();
+            }
+            else
+            {
+                FRMLoadMesas.Instancia.Show();
+            }
 
         }
     }

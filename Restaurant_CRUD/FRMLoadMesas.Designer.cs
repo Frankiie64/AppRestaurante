@@ -172,6 +172,7 @@ namespace Restaurant_CRUD
             this.BTMListarOrdenes.TabIndex = 10;
             this.BTMListarOrdenes.Text = "Ver ordenes";
             this.BTMListarOrdenes.UseVisualStyleBackColor = true;
+            this.BTMListarOrdenes.Click += new System.EventHandler(this.BTMListarOrdenes_Click);
             // 
             // FRMLoadMesas
             // 

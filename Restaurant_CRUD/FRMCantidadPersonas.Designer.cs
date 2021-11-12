@@ -52,7 +52,7 @@ namespace Restaurant_CRUD
             this.TLPPedidos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25.45455F));
             this.TLPPedidos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 42.10526F));
             this.TLPPedidos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.08271F));
-            this.TLPPedidos.Size = new System.Drawing.Size(557, 133);
+            this.TLPPedidos.Size = new System.Drawing.Size(663, 181);
             this.TLPPedidos.TabIndex = 0;
             // 
             // LBLCantidadPersonas
@@ -60,9 +60,9 @@ namespace Restaurant_CRUD
             this.LBLCantidadPersonas.AutoSize = true;
             this.LBLCantidadPersonas.Dock = System.Windows.Forms.DockStyle.Top;
             this.LBLCantidadPersonas.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.LBLCantidadPersonas.Location = new System.Drawing.Point(3, 33);
+            this.LBLCantidadPersonas.Location = new System.Drawing.Point(3, 45);
             this.LBLCantidadPersonas.Name = "LBLCantidadPersonas";
-            this.LBLCantidadPersonas.Size = new System.Drawing.Size(272, 55);
+            this.LBLCantidadPersonas.Size = new System.Drawing.Size(325, 28);
             this.LBLCantidadPersonas.TabIndex = 0;
             this.LBLCantidadPersonas.Text = "Cuantas personas van a ordenar";
             this.LBLCantidadPersonas.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -70,19 +70,20 @@ namespace Restaurant_CRUD
             // CbxCantidadPersonas
             // 
             this.CbxCantidadPersonas.Dock = System.Windows.Forms.DockStyle.Top;
+            this.CbxCantidadPersonas.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CbxCantidadPersonas.FormattingEnabled = true;
-            this.CbxCantidadPersonas.Location = new System.Drawing.Point(281, 36);
+            this.CbxCantidadPersonas.Location = new System.Drawing.Point(334, 48);
             this.CbxCantidadPersonas.Name = "CbxCantidadPersonas";
-            this.CbxCantidadPersonas.Size = new System.Drawing.Size(273, 33);
+            this.CbxCantidadPersonas.Size = new System.Drawing.Size(326, 33);
             this.CbxCantidadPersonas.TabIndex = 1;
             // 
             // BTMEnviarCantidadPerosnas
             // 
             this.BTMEnviarCantidadPerosnas.Dock = System.Windows.Forms.DockStyle.Right;
             this.BTMEnviarCantidadPerosnas.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.BTMEnviarCantidadPerosnas.Location = new System.Drawing.Point(442, 91);
+            this.BTMEnviarCantidadPerosnas.Location = new System.Drawing.Point(548, 123);
             this.BTMEnviarCantidadPerosnas.Name = "BTMEnviarCantidadPerosnas";
-            this.BTMEnviarCantidadPerosnas.Size = new System.Drawing.Size(112, 39);
+            this.BTMEnviarCantidadPerosnas.Size = new System.Drawing.Size(112, 55);
             this.BTMEnviarCantidadPerosnas.TabIndex = 2;
             this.BTMEnviarCantidadPerosnas.Text = "ENVIAR";
             this.BTMEnviarCantidadPerosnas.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -93,7 +94,7 @@ namespace Restaurant_CRUD
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(557, 133);
+            this.ClientSize = new System.Drawing.Size(663, 181);
             this.Controls.Add(this.TLPPedidos);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;

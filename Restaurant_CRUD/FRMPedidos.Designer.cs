@@ -141,6 +141,7 @@ namespace Restaurant_CRUD
             // CBXEntrada
             // 
             this.CBXEntrada.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.CBXEntrada.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CBXEntrada.FormattingEnabled = true;
             this.CBXEntrada.Location = new System.Drawing.Point(402, 140);
             this.CBXEntrada.Name = "CBXEntrada";
@@ -150,6 +151,7 @@ namespace Restaurant_CRUD
             // CBXPlatoFuerte
             // 
             this.CBXPlatoFuerte.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.CBXPlatoFuerte.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CBXPlatoFuerte.FormattingEnabled = true;
             this.CBXPlatoFuerte.Location = new System.Drawing.Point(402, 212);
             this.CBXPlatoFuerte.Name = "CBXPlatoFuerte";
@@ -159,6 +161,7 @@ namespace Restaurant_CRUD
             // CBXBebidas
             // 
             this.CBXBebidas.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.CBXBebidas.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CBXBebidas.FormattingEnabled = true;
             this.CBXBebidas.Location = new System.Drawing.Point(402, 284);
             this.CBXBebidas.Name = "CBXBebidas";
@@ -168,6 +171,7 @@ namespace Restaurant_CRUD
             // CBXPostre
             // 
             this.CBXPostre.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.CBXPostre.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CBXPostre.FormattingEnabled = true;
             this.CBXPostre.Location = new System.Drawing.Point(402, 356);
             this.CBXPostre.Name = "CBXPostre";
@@ -215,6 +219,7 @@ namespace Restaurant_CRUD
             this.Controls.Add(this.TLPPedidos);
             this.Name = "FRMPedidos";
             this.Text = "Ordenes";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.f);
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FRMPedidos_FormClosed);
             this.Load += new System.EventHandler(this.FRMPedidos_Load);
             this.TLPPedidos.ResumeLayout(false);
